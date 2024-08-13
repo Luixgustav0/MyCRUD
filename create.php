@@ -17,9 +17,9 @@
 
             include "conexao.php";
 
-            $nome = $_POST('nome');
-            $email = $_POST('email');
-            $idade = $_POST ('idade');
+            $nome = $_POST['nome'];
+            $email = $_POST['email'];
+            $idade = $_POST['idade'];
             $sqlcreate = "INSERT INTO `usuario`(`nome`,`email`, `idade`) 
             VALUES ('$nome','$email','$idade')";  
 
