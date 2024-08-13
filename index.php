@@ -18,15 +18,15 @@
                 <form action ="create.php" method="POST">
                     <div class="form-group">                 
                         <label for="nome">Insira Seu Nome</label>
-                        <input type="txt" class="form-control" placeholder="Seu Nome">    
+                        <input type="txt" class="form-control" placeholder="Seu Nome" name='nome'>                       
                     </div>
                     <div class ="form-group">
                      <label for="email">Insira Seu Email</label>
-                     <input type="txt" class="form-control" placeholder="Seu Email">
+                     <input type="txt" class="form-control" placeholder="Seu Email" name='email'>
                     </div>
                     <div class ="form-group">
                      <label for="idade">Insira Sua Idade</label>
-                     <input type="txt" class="form-control" placeholder="Sua Idade">
+                     <input type="txt" class="form-control" placeholder="Sua Idade" name='idade'>
                     </div>
                     <div class ="form-group">
                      <input type="submit" class="btn btn-success">
