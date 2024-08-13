@@ -16,18 +16,26 @@
             <?php
 
             include "conexao.php";
-
+             
             $nome = $_POST['nome'];
             $email = $_POST['email'];
             $idade = $_POST['idade'];
-            $sqlcreate = "INSERT INTO `usuario`(`nome`,`email`, `idade`) 
-            VALUES ('$nome','$email','$idade')";  
-
-            if ( mysqli_query($cnc, $sqlcreate)) {
+            $query = 'SELECT id FROM usuario WHERE nome = '.$nome.'";
+            $sql = mysqli_query($link, $query);
+            if (mysqli_num_rows($sql) == 0) {
+            //executa insert
+            } else {
+            //aparece mensagem na tela
+              echo "Usuario já cadastrado!";   
+            }   
+            
+            $sql = "INSERT INTO `usuario`(`nome`,`email`, `idade`) 
+            VALUES ('$nome','$email','$idade')";
+            if ( mysqli_query($link, $sql)) {
                 echo"Cadastrado com Sucesso !"; 
             } else
                echo "Falha ao Cadastrar !" ;
-     ?>  
+             ?>  
         </div>
     </div>
  
