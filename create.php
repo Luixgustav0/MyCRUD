@@ -20,7 +20,7 @@
             $nome = $_POST['nome'];
             $email = $_POST['email'];
             $idade = $_POST['idade'];
-            $query = 'SELECT id FROM usuario WHERE nome = '.$nome.'";
+            $query = "SELECT id FROM usuario WHERE nome = '.$nome.'";
             $sql = mysqli_query($link, $query);
             if (mysqli_num_rows($sql) == 0) {
             $sql = "INSERT INTO `usuario`(`nome`,`email`, `idade`) 
